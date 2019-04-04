@@ -32,21 +32,21 @@ public class Graph
         // create the graph given in above figure 
         int V = 5; 
         Graph g = new Graph(V); 
-        g.addEdge( 0, 1); 
-        g.addEdge( 0, 4); 
-        g.addEdge( 1, 2); 
-        g.addEdge( 1, 3); 
-        g.addEdge( 1, 4); 
-        g.addEdge( 2, 3); 
-        g.addEdge( 3, 4); 
-       g.BFS(0);
+        g.addEdge(0, 1); 
+        g.addEdge(0, 2); 
+        g.addEdge(1, 2); 
+        g.addEdge(2, 0); 
+        g.addEdge(2, 3); 
+        g.addEdge(3, 3); 
+        g.BFS(2);
         // print the adjacency list representation of  
         // the above graph 
-        g.printGraph(); 
+       // g.printGraph(); 
     } 
     public void BFS(int source){
         boolean[] visited = new boolean[V];
         Queue<Integer> qu = new LinkedList<Integer>();
+         visited[source]=true;
         qu.add(source);
         
        
